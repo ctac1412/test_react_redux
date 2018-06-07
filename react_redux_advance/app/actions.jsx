@@ -1,14 +1,14 @@
-var addDocItem = function (DocItem) {
+var addPhone = function (phone) {
   return {
-    type: "ADD_ITEM_DOC",
-    DocItem
+    type: "ADD_PHONE",
+    phone
   }
 };
-var deleteDocItem = function (DocItem) {
+var deletePhone = function (phone) {
   return {
-    type: "DELETE_ITEM_DOC",
-    DocItem
+    type: "DELETE_PHONE",
+    phone
   }
 };
- 
-module.exports = {addDocItem, deleteDocItem};
+
+module.exports = {addPhone, deletePhone};
