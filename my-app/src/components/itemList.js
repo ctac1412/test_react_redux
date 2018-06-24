@@ -5,19 +5,19 @@ class ItemList extends Component {
       super(props);
       console.log(props);
   }
+  
   render() {
     return (
+
       <div>
       <ul>
-
       {
-          this.props.items.map(function(item){
-            var a = new Date()
-              return (<li>{item} {a}</li>)
+          this.props.items.map(function(item, index){
+              return (<li key={index}>{item.number}</li>)
           })
     }
       </ul>
-      <button onClick={this.props.onClickButton}>SET ITEMS</button>
+      <button onClick={this.props.onClickButton}>GET ITEMS</button>
       </div>
     );
   }

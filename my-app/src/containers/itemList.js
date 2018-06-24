@@ -1,19 +1,19 @@
 import { connect } from 'react-redux'
 import { setItems } from '../actions'
+import { getItems } from '../actions'
 import itemList from '../components/itemList'
-const defData = [
-  'item1',
-  'item2',
-  'item3',
-  'item4',
-]
+
 const mapStateToProps = state => ({
   items: state.items
 })
+
 const mapDispatchToProps = dispatch => ({
-  onClickButton:()=>{
-    console.log("I've clicked");
-    dispatch(setItems(defData));
+  onClickButton:(items)=>{
+    // console.log(store)
+    dispatch(setItems(items));
+    // getItems();
+    // fetchOnPress()
+    // setItems(state)
   },
   onHoverButton:()=>{
     console.log("I'm hover");
